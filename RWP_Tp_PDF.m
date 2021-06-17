@@ -8,7 +8,8 @@ E_L = 0.521405*a;
 
 ps = 0.1;
 ps2 = 0.3;
-v = 0.01*randi([5 15]);
+v = 0.01;
+%v = 0.01*randi([5 15]);
 
 init_x = makedist('Uniform','lower',0,'upper',a);
 f_init_x = pdf(init_x, x);
