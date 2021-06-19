@@ -108,12 +108,6 @@ function s_mobility = Generate_Mobility(s_input)
         disp(['y coordinates are: [' num2str(s_mobility_tmp.VS_NODE(nodeIndex_tmp).V_POSITION_Y(:).') ']']) ;
     end
     
-    for nodeIndex_tmp = 1:s_mobility.NB_NODES
-        disp(nodeIndex_tmp)
-        disp(['x coordinates are: [' num2str(s_mobility_tmp.VS_NODE(nodeIndex_tmp).V_POSITION_X(:).') ']']) ;
-        disp(['y coordinates are: [' num2str(s_mobility_tmp.VS_NODE(nodeIndex_tmp).V_POSITION_Y(:).') ']']) ;
-    end
-    
     clear s_mobility_tmp;
     clear nodeIndex_tmp;
 end
