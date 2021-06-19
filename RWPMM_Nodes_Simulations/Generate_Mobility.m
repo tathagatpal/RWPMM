@@ -100,23 +100,13 @@ function s_mobility = Generate_Mobility(s_input)
 
     end
     
-%     disp(s_mobility_tmp.VS_NODE(nodeIndex_tmp).V_POSITION_X);
-%     disp(s_mobility_tmp.VS_NODE(nodeIndex_tmp).V_POSITION_Y);
+    %Printing the values of x and y coordinates of each node 
     
-%     disp(['x coordinates are: [' num2str(s_mobility_tmp.VS_NODE(nodeIndex_tmp).V_POSITION_X(:).') ']']) ;
-%     disp(['y coordinates are: [' num2str(s_mobility_tmp.VS_NODE(nodeIndex_tmp).V_POSITION_Y(:).') ']']) ;
-
-%     pos_x = zeros(1, length(s_mobility_tmp.VS_NODE(nodeIndex_tmp).V_POSITION_X));
-%     pos_y = zeros(1, length(s_mobility_tmp.VS_NODE(nodeIndex_tmp).V_POSITION_Y));
-    
-%     for nodeIndex_tmp = 1:s_mobility.NB_NODES
-%         for i = 1: length(s_mobility_tmp.VS_NODE(nodeIndex_tmp).V_POSITION_X)
-%             pos_x(i) = s_mobility_tmp.VS_NODE(nodeIndex_tmp).V_POSITION_X(i);
-%             pos_y(i) = s_mobility_tmp.VS_NODE(nodeIndex_tmp).V_POSITION_Y(i);
-%         end
-%         disp(pos_x);
-%         disp(pos_y);
-%     end
+    for nodeIndex_tmp = 1:s_mobility.NB_NODES
+        disp(nodeIndex_tmp)
+        disp(['x coordinates are: [' num2str(s_mobility_tmp.VS_NODE(nodeIndex_tmp).V_POSITION_X(:).') ']']) ;
+        disp(['y coordinates are: [' num2str(s_mobility_tmp.VS_NODE(nodeIndex_tmp).V_POSITION_Y(:).') ']']) ;
+    end
     
     for nodeIndex_tmp = 1:s_mobility.NB_NODES
         disp(nodeIndex_tmp)
