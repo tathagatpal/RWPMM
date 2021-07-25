@@ -313,10 +313,10 @@ H_A3=(ml+1)*Adet.*cosphi_A3.^(ml+1)./(2*pi.*D3.^2);
 H_A4=(ml+1)*Adet.*cosphi_A4.^(ml+1)./(2*pi.*D4.^2);
 
 
-H_A1_blockageA = H_A1.*(1-0-0);
-H_A1_blockageB = H_A2.*(1-0-0.158);
-H_A1_blockageC = H_A3.*(1-0-0.209);
-H_A1_blockageD = H_A4.*(1- 0 - 0.027);
+H_A1_blockageA = H_A1.*(1-mean(prob_finalA));
+H_A1_blockageB = H_A2.*(1-mean(prob_finalB));
+H_A1_blockageC = H_A3.*(1-mean(prob_finalC));
+H_A1_blockageD = H_A4.*(1-mean(prob_finalD));
 
 
 P_rec_A1 = P_total.*H_A1_blockageA.*Ts.*G_Con;
@@ -377,7 +377,5 @@ function [prob_block] = integrate(x,y,pause_prob, m_min, c_min, m_max, c_max, x_
     
     prob_block = dx2-dx1;
     
-%     display(prob_block);
-
 end
 
